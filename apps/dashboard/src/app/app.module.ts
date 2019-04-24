@@ -1,3 +1,6 @@
+import { ProjectsModule } from './projects/projects.module';
+import { CustomersModule } from './customers/customers.module';
+import { HomeModule } from './home/home.module';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -14,7 +17,10 @@ import { AppComponent } from './app.component';
     NxModule.forRoot(),
     RouterModule.forRoot([], { initialNavigation: 'enabled' }),
     BrowserAnimationsModule,
-    MaterialModule
+    MaterialModule,
+    HomeModule,
+    CustomersModule,
+    ProjectsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
