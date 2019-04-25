@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./projects.component.scss']
 })
 export class ProjectsComponent implements OnInit {
+  primaryColor = 'red';
   projects = [
     {
       id: '1',
@@ -36,6 +37,10 @@ export class ProjectsComponent implements OnInit {
 
   selectProject(project) {
     this.selectedProject = project;
+  }
+
+  cancel() {
+    this.selectProject(null);
   }
 
   ngOnInit() {
