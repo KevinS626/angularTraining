@@ -126,6 +126,17 @@
       "customerId": "7"
     },
     {
+      "id": "4",
+      "title": "Project Four",
+      "details": "This is a sample project",
+      "percentComplete": 75,
+      "approved": false,
+      "startDate": null,
+      "targetDate": null,
+      "completionDate": null,
+      "customerId": "7"
+    },
+    {
       "id": "5",
       "title": "Project Five",
       "details": "This is a sample project",
