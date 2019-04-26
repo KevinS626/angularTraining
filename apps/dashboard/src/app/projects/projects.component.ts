@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ProjectsService, Project } from '@workshop/core-data';
+import { resultMemoize } from '@ngrx/store';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-projects',
@@ -8,7 +10,7 @@ import { ProjectsService, Project } from '@workshop/core-data';
 })
 export class ProjectsComponent implements OnInit {
   primaryColor = 'red';
-  projects: Project[];
+  projects$;
   selectedProject: Project[];
 
   constructor(private projectService: ProjectsService) { }
@@ -21,9 +23,17 @@ export class ProjectsComponent implements OnInit {
     this.selectedProject = project;
   }
 
+  // getProjects() {
+  //   this.projectService.all()
+  //     .subscribe((result: any) =>this.projects = result);
+  // }
   getProjects() {
-    this.projectService.all()
-      .subscribe((result: any) =>this.projects = result);
+    this.projects$ = this.projectService.all();
+  }
+
+  deleteProject(project) {
+    this.projectService.delete(project)
+      .subscribe(result => this.getProjects())
   }
 
   cancel() {
