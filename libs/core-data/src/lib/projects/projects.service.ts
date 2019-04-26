@@ -17,7 +17,7 @@ export class ProjectsService {
   }
 
   getUrlForId(id) {
-    return `${this.getUrl}/${id}`;
+    return `${this.getUrl()}/${id}`;
   }
 
   all() {

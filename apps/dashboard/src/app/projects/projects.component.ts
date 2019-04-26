@@ -11,7 +11,7 @@ import { Observable } from 'rxjs';
 export class ProjectsComponent implements OnInit {
   primaryColor = 'red';
   projects$;
-  selectedProject: Project[];
+  selectedProject: Project;
 
   constructor(private projectService: ProjectsService) { }
 
