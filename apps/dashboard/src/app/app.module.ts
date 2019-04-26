@@ -12,6 +12,7 @@ import { AppComponent } from './app.component';
 import { CustomersModule } from './customers/customers.module';
 import { HomeModule } from './home/home.module';
 import { ProjectsModule } from './projects/projects.module';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [AppComponent],
@@ -19,6 +20,7 @@ import { ProjectsModule } from './projects/projects.module';
     BrowserModule,
     NxModule.forRoot(),
     BrowserAnimationsModule,
+    FormsModule,
     HttpClientModule,
     MaterialModule,
     UiLoginModule,
